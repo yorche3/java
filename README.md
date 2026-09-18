@@ -1,6 +1,6 @@
 # Java
 
-Proyectos en **Java (JDK 17+)**, con gestión de dependencias mediante **Maven** y el framework de pruebas **JUnit 5**.
+Proyectos en **Java (JDK 25+)**, con gestión de dependencias mediante **Maven** y el framework de pruebas **JUnit 5**.
 
 ---
 
@@ -9,6 +9,7 @@ Proyectos en **Java (JDK 17+)**, con gestión de dependencias mediante **Maven**
 | Módulo | Descripción |
 | ------ | ----------- |
 | [`core/foundations/`](core/foundations/) | **Fase 0 — Fundamentos**: `helloworld`, `hellouser`, `unit_test/calculator`, `numbers` |
+| [`core/algorithms/`](core/algorithms/) | **Fase 1 — Algoritmos Puros**: `naive_sort` |
 
 ---
 
@@ -30,6 +31,10 @@ mvn test
 # Numbers Tests
 cd core/foundations/numbers
 mvn test
+
+# Naive Sort Tests
+cd core/algorithms/naive_sort
+mvn test
 ```
 
 ---
@@ -38,7 +43,7 @@ mvn test
 
 | Herramienta | Instalación |
 | ----------- | ----------- |
-| [JDK 17+](https://adoptium.net/) | `sudo apt install openjdk-17-jdk` (Linux) / `winget install Microsoft.OpenJDK.17` (Windows) / [Descargar](https://adoptium.net/) |
+| [JDK 25+](https://adoptium.net/) | `sudo apt install openjdk-25-jdk` (Linux) / `winget install Microsoft.OpenJDK.25` (Windows) / [Descargar](https://adoptium.net/) |
 | [Maven 3.6+](https://maven.apache.org/download.cgi) | `sudo apt install maven` (Linux) / `winget install Apache.Maven` (Windows) / [Descargar](https://maven.apache.org/download.cgi) |
 
 ```bash

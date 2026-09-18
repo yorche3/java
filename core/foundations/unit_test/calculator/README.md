@@ -8,7 +8,7 @@ Implementación de la especificación [03_Unit_Test_Calculator](https://yorche3.
 
 | Archivo | Propósito |
 | ------- | --------- |
-| [`pom.xml`](pom.xml) | Proyecto Maven — declara Java 17 y la dependencia de test `junit-jupiter`. |
+| [`pom.xml`](pom.xml) | Proyecto Maven — declara Java 25 y la dependencia de test `junit-jupiter`. |
 | [`src/main/java/calculator/Calculator.java`](src/main/java/calculator/Calculator.java) | Clase `Calculator` con las 5 operaciones aritméticas (métodos estáticos). |
 | [`src/test/java/calculator/CalculatorTest.java`](src/test/java/calculator/CalculatorTest.java) | 5 pruebas unitarias con `@Test` y `assertEquals`. |
 | [`.gitignore`](.gitignore) | Ignora `target/` (salida de compilación de Maven). |
@@ -51,9 +51,9 @@ calculator/
 
 ### `pom.xml` — Proyecto Maven
 
-**ES:** Declara el artefacto `calculator`, el nivel de lenguaje Java 17 y la única dependencia externa: `junit-jupiter` (scope `test`). El plugin `maven-surefire-plugin` es el que ejecuta los tests.
+**ES:** Declara el artefacto `calculator`, el nivel de lenguaje Java 25 y la única dependencia externa: `junit-jupiter` (scope `test`). El plugin `maven-surefire-plugin` es el que ejecuta los tests.
 
-**EN:** Declares the `calculator` artifact, Java 17 language level, and the single external dependency: `junit-jupiter` (`test` scope). The `maven-surefire-plugin` runs the tests.
+**EN:** Declares the `calculator` artifact, Java 25 language level, and the single external dependency: `junit-jupiter` (`test` scope). The `maven-surefire-plugin` runs the tests.
 
 ### `Calculator.java` — Módulo principal
 
@@ -146,11 +146,11 @@ public class CalculatorTest {
 
 ### Requisitos / Requirements
 
-- **JDK 17 o superior** (`javac` y `java`).
+- **JDK 25 o superior** (`javac` y `java`).
 - **Maven 3.6+** (`mvn`).
 
 ```bash
-java -version   # OpenJDK 17+
+java -version   # OpenJDK 25+
 mvn -version
 ```
 
