@@ -46,7 +46,7 @@ algorithms/
 | **Visibilidad** | Métodos `public static` en la clase del módulo; helpers `private static` |
 | **Naming** | `camelCase` (`selectionSort`); clases en `PascalCase`, paquete = nombre del módulo |
 | **Indicador de fallo** | `null` — se devuelve tal cual, sin lanzar excepciones |
-| **Nivel de Java** | `maven.compiler.release` (17 en `numbers/` y `calculator/`, 25 en `naive_sort/`) |
+| **Nivel de Java** | `maven.compiler.release` 25 en todos los módulos del submódulo |
 | **Artefactos** | `target/` — ignorado en `.gitignore` |
 
 ---

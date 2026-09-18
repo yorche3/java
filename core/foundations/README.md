@@ -1,6 +1,6 @@
 # 🚀 Fundamentos / Foundations — Java
 
-Implementación de los ejercicios de la sección [Fundamentos / Foundations](https://yorche3.github.io/programming_languages/core/foundations/) del repositorio principal en **Java (JDK 17+)**.
+Implementación de los ejercicios de la sección [Fundamentos / Foundations](https://yorche3.github.io/programming_languages/core/foundations/) del repositorio principal en **Java (JDK 25+)**.
 
 ---
 

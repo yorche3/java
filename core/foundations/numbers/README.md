@@ -10,7 +10,7 @@ Tres enfoques de implementación para los mismos 5 algoritmos: **recursivo direc
 
 | Archivo | Propósito |
 | ------- | --------- |
-| [`pom.xml`](pom.xml) | Proyecto Maven — declara Java 17 y la dependencia de test `junit-jupiter`. |
+| [`pom.xml`](pom.xml) | Proyecto Maven — declara Java 25 y la dependencia de test `junit-jupiter`. |
 | [`src/main/java/numbers/Numbers.java`](src/main/java/numbers/Numbers.java) | Clase `Numbers` — 15 métodos (3 enfoques × 5 algoritmos) + 4 helpers `private static`. |
 | [`src/test/java/numbers/NumbersRecursiveTest.java`](src/test/java/numbers/NumbersRecursiveTest.java) | 5 pruebas para el enfoque recursivo directo (11 casos). |
 | [`src/test/java/numbers/NumbersIterativeTest.java`](src/test/java/numbers/NumbersIterativeTest.java) | 5 pruebas para el enfoque iterativo (11 casos). |
@@ -131,7 +131,7 @@ void testFibonacciRec() {
 
 ### Requisitos / Requirements
 
-- **JDK 17 o superior** (`javac` y `java`).
+- **JDK 25 o superior** (`javac` y `java`).
 - **Maven 3.6+** (`mvn`).
 
 ### Ejecutar las pruebas unitarias / Run tests
