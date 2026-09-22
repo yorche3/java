@@ -1,21 +1,12 @@
 package naive_sort;
 
-/**
- * naive_sort — Módulo Naive Sort con ordenamientos elementales.
- *
- * <p>Especificación: 05_Naive_Sort.
- *
- * <p>Contrato de las funciones ({@code int[] -> int[]}), de menor a mayor:
- * <ul>
- *   <li>{@code selectionSort} — encuentra el mínimo del tramo no ordenado y lo ubica al inicio.</li>
- *   <li>{@code bubbleSort}    — compara e intercambia adyacentes, con bandera {@code swapped}.</li>
- *   <li>{@code insertionSort} — inserta cada elemento en su sub-array ordenado.</li>
- * </ul>
- *
- * <p>Caso nulo: en Java un array puede ser {@code null}, así que el indicador de fallo es
- * devolver {@code null} cuando la entrada es {@code null}, sin lanzar excepciones.
- */
+// naive_sort — ordenamientos elementales O(n^2) sobre un array de enteros (in-place).
+// Especificación: 05_Naive_Sort.
+// Contrato: int[] -> int[] de menor a mayor; null si la entrada es null, sin excepciones.
 public class NaiveSort {
+    // selectionSort: busca el mínimo del tramo no ordenado y lo intercambia con el inicio.
+    // input: array de enteros (se ordena in-place)
+    // output: el mismo array ordenado; null si la entrada es null
     public static int[] selectionSort(int[] arr) {
         if (arr == null) return null;
         int n = arr.length;
@@ -36,6 +27,9 @@ public class NaiveSort {
         return arr;
     }
 
+    // bubbleSort: compara e intercambia adyacentes, con bandera de salida temprana.
+    // input: array de enteros (se ordena in-place)
+    // output: el mismo array ordenado; null si la entrada es null
     public static int[] bubbleSort(int[] arr) {
         if (arr == null) return null;
         int n = arr.length;
@@ -55,6 +49,9 @@ public class NaiveSort {
         return arr;
     }
 
+    // insertionSort: desplaza cada clave y la inserta en su posición del tramo ordenado.
+    // input: array de enteros (se ordena in-place)
+    // output: el mismo array ordenado; null si la entrada es null
     public static int[] insertionSort(int[] arr) {
         if (arr == null) return null;
         int n = arr.length;
