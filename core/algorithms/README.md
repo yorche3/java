@@ -1,6 +1,6 @@
 # Algorithms Pure — Java
 
-Implementaciones de la [Fase 1 — Algoritmos Puros](https://yorche3.github.io/programming_languages/ROADMAP/#fase-1--algoritmos-puros--algorithms-pure-) en **Java** sobre la JVM: ordenamientos elementales, estructuras de datos propias, ordenamientos óptimos y distribuidos, y búsqueda.
+Implementaciones de la [Fase 1 — Algoritmos Puros](https://yorche3.github.io/programming_languages/ROADMAP/#fase-1--algoritmos-puros--algorithms-pure-) en **Java** sobre la JVM: ordenamientos elementales, estructuras de datos propias (lista enlazada, pila y cola), ordenamientos óptimos y distribuidos, y búsqueda.
 
 Los módulos de esta fase trabajan sobre `int[]`, que en Java **es mutable**, **admite `null`** y se ordena *in-place*.
 
@@ -11,6 +11,7 @@ Los módulos de esta fase trabajan sobre `int[]`, que en Java **es mutable**, **
 | Módulo | Especificación | Enfoque | Tests | Estado |
 |--------|---------------|---------|:-----:|:------:|
 | [`naive_sort/`](naive_sort/) | [05_Naive_Sort](https://yorche3.github.io/programming_languages/core/algorithms/05_Naive_Sort/) | `mvn test` + JUnit 5 | 3 | ✅ |
+| [`data_structures_basics/`](data_structures_basics/) | [06_Data_Structures_Basics](https://yorche3.github.io/programming_languages/core/algorithms/06_Data_Structures_Basics/) | `mvn test` + JUnit 5 | 23 | ✅ |
 
 ---
 
@@ -18,7 +19,7 @@ Los módulos de esta fase trabajan sobre `int[]`, que en Java **es mutable**, **
 
 ```text
 algorithms/
-└── naive_sort/                       # 05_Naive_Sort
+├── naive_sort/                       # 05_Naive_Sort
     ├── pom.xml
     ├── .gitignore                    # target/
     ├── src/
@@ -26,6 +27,18 @@ algorithms/
     │   │   └── NaiveSort.java        # selectionSort, bubbleSort, insertionSort
     │   └── test/java/naive_sort/
     │       └── NaiveSortTest.java    # 3 tests × (7 casos + caso nulo)
+    └── README.md
+└── data_structures_basics/           # 06_Data_Structures_Basics
+    ├── pom.xml
+    ├── .gitignore                    # target/
+    ├── src/
+    │   ├── main/java/data_structures_basics/
+    │   │   ├── Node.java             # celda enlazada
+    │   │   ├── LinkedList.java       # head, tail, count
+    │   │   ├── Stack.java            # LIFO
+    │   │   └── Queue.java            # FIFO
+    │   └── test/java/data_structures_basics/
+    │       └── DataStructuresBasicsTest.java  # 23 tests
     └── README.md
 ```
 
@@ -45,7 +58,7 @@ algorithms/
 | **Iteración** | Bucles `for`/`while` explícitos sobre `int[]` |
 | **Visibilidad** | Métodos `public static` en la clase del módulo; helpers `private static` |
 | **Naming** | `camelCase` (`selectionSort`); clases en `PascalCase`, paquete = nombre del módulo |
-| **Indicador de fallo** | `null` — se devuelve tal cual, sin lanzar excepciones |
+| **Indicador de fallo** | `null` en `naive_sort` (se devuelve tal cual); `-1` en `data_structures_basics` (estructura vacía); sin lanzar excepciones |
 | **Nivel de Java** | `maven.compiler.release` 25 en todos los módulos del submódulo |
 | **Artefactos** | `target/` — ignorado en `.gitignore` |
 
@@ -56,6 +69,10 @@ algorithms/
 ```bash
 # Naive Sort Tests
 cd naive_sort
+mvn test
+
+# Data Structures Basics Tests
+cd ../data_structures_basics
 mvn test
 ```
 
