@@ -23,25 +23,43 @@ public class Queue {
 
     // enqueue: añade el valor por el final de la cola.
     public void enqueue(int value) {
+        Node newNode = new Node(value);
+        if (this.rear == null) {
+            this.front = newNode;
+            this.rear = newNode;
+        } else {
+            this.rear.setNext(newNode);
+            this.rear = newNode;
+        }
+        this.count++;
     }
 
     // dequeue: extrae y devuelve el frente, o -1 si la cola está vacía.
     public int dequeue() {
-        return -1;
+        if (this.front == null) {
+            return -1;
+        }
+        int value = this.front.getValue();
+        this.front = this.front.getNext();
+        if (this.front == null) {
+            this.rear = null;
+        }
+        this.count--;
+        return value;
     }
 
     // peek: observa el frente sin extraerlo, o -1 si la cola está vacía.
     public int peek() {
-        return -1;
+        return this.front != null ? this.front.getValue() : -1;
     }
 
     // isEmpty: informa si la cola no tiene nodos.
     public boolean isEmpty() {
-        return false;
+        return this.count == 0;
     }
 
     // size: número de nodos de la cola.
     public int size() {
-        return 0;
+        return this.count;
     }
 }

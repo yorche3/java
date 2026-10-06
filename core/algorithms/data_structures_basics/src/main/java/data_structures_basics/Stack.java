@@ -20,25 +20,35 @@ public class Stack {
 
     // push: apila el valor sobre el tope.
     public void push(int value) {
+        Node newNode = new Node(value);
+        newNode.setNext(this.top);
+        this.top = newNode;
+        this.count++;
     }
 
     // pop: extrae y devuelve el tope, o -1 si la pila está vacía.
     public int pop() {
-        return -1;
+        if (this.top == null) {
+            return -1;
+        }
+        int value = this.top.getValue();
+        this.top = this.top.getNext();
+        this.count--;
+        return value;
     }
 
     // peek: observa el tope sin extraerlo, o -1 si la pila está vacía.
     public int peek() {
-        return -1;
+        return this.top != null ? this.top.getValue() : -1;
     }
 
     // isEmpty: informa si la pila no tiene nodos.
     public boolean isEmpty() {
-        return false;
+        return this.count == 0;
     }
 
     // size: número de nodos de la pila.
     public int size() {
-        return 0;
+        return this.count;
     }
 }
