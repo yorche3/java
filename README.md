@@ -9,7 +9,7 @@ Proyectos en **Java (JDK 25+)**, con gestión de dependencias mediante **Maven**
 | Módulo | Descripción |
 | ------ | ----------- |
 | [`core/foundations/`](core/foundations/) | **Fase 0 — Fundamentos**: `helloworld`, `hellouser`, `unit_test/calculator`, `numbers` |
-| [`core/algorithms/`](core/algorithms/) | **Fase 1 — Algoritmos Puros**: `naive_sort` |
+| [`core/algorithms/`](core/algorithms/) | **Fase 1 — Algoritmos Puros**: `naive_sort`, `data_structures_basics` |
 
 ---
 
@@ -34,6 +34,10 @@ mvn test
 
 # Naive Sort Tests
 cd core/algorithms/naive_sort
+mvn test
+
+# Data Structures Basics Tests
+cd core/algorithms/data_structures_basics
 mvn test
 ```
 
