@@ -21,12 +21,12 @@ public class Node {
 
     // getValue: valor de la celda.
     public int getValue() {
-        return value;
+        return this.value;
     }
 
     // getNext: enlace de la celda; null cuando está ausente.
     public Node getNext() {
-        return next;
+        return this.next;
     }
 
     // setNext: actualiza el enlace de la celda.
