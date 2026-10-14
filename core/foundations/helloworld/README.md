@@ -85,6 +85,15 @@ Hello, World! from Java!
 
 ---
 
+## 📝 Notas de implementación / Implementation Notes
+
+- **ES:** `javac` compila a bytecode (`.class`) y `java` ejecuta ese bytecode: no hay fase de enlazado ni dependencias externas.
+- **EN:** `javac` compiles to bytecode (`.class`) and `java` runs that bytecode: there is no linking phase and no external dependencies.
+- **ES:** La clase pública debe llamarse igual que el archivo: por eso la convención del módulo es `HelloWorld.java` con `public class HelloWorld`.
+- **EN:** A public class must be named after its file: that is why the module's convention is `HelloWorld.java` with `public class HelloWorld`.
+
+---
+
 ## 🌐 Otras implementaciones / Other implementations
 
 Este proyecto también está implementado en otros lenguajes. Explora el [repositorio principal](https://github.com/yorche3/programming_languages) para ver todas las versiones.
