@@ -12,6 +12,7 @@ Los módulos de esta fase trabajan sobre `int[]`, que en Java **es mutable**, **
 |--------|---------------|---------|:-----:|:------:|
 | [`naive_sort/`](naive_sort/) | [05_Naive_Sort](https://yorche3.github.io/programming_languages/core/algorithms/05_Naive_Sort/) | `mvn test` + JUnit 5 | 3 | ✅ |
 | [`data_structures_basics/`](data_structures_basics/) | [06_Data_Structures_Basics](https://yorche3.github.io/programming_languages/core/algorithms/06_Data_Structures_Basics/) | `mvn test` + JUnit 5 | 23 | ✅ |
+| [`data_structures_advanced/`](data_structures_advanced/) | [07_Data_Structures_Advanced](https://yorche3.github.io/programming_languages/core/algorithms/07_Data_Structures_Advanced/) | `mvn test` + JUnit 5 | 23 | ✅ |
 
 ---
 
@@ -28,7 +29,7 @@ algorithms/
     │   └── test/java/naive_sort/
     │       └── NaiveSortTest.java    # 3 tests × (7 casos + caso nulo)
     └── README.md
-└── data_structures_basics/           # 06_Data_Structures_Basics
+├── data_structures_basics/           # 06_Data_Structures_Basics
     ├── pom.xml
     ├── .gitignore                    # target/
     ├── src/
@@ -39,6 +40,19 @@ algorithms/
     │   │   └── Queue.java            # FIFO
     │   └── test/java/data_structures_basics/
     │       └── DataStructuresBasicsTest.java  # 23 tests
+    └── README.md
+└── data_structures_advanced/         # 07_Data_Structures_Advanced
+    ├── pom.xml
+    ├── .gitignore                    # target/
+    ├── src/
+    │   ├── main/java/data_structures_advanced/
+    │   │   ├── Node.java             # clase base abstracta
+    │   │   ├── TreeNode.java         # nodo de árbol binario
+    │   │   ├── BinaryTree.java       # árbol binario de búsqueda
+    │   │   ├── GraphNode.java        # nodo de grafo
+    │   │   └── Graph.java            # grafo dirigido
+    │   └── test/java/data_structures_advanced/
+    │       └── DataStructuresAdvancedTest.java  # 23 tests
     └── README.md
 ```
 
@@ -73,6 +87,10 @@ mvn test
 
 # Data Structures Basics Tests
 cd ../data_structures_basics
+mvn test
+
+# Data Structures Advanced Tests
+cd ../data_structures_advanced
 mvn test
 ```
 
